@@ -1,0 +1,510 @@
+/* global¨*/
+
+body {
+    margin: 0;
+    padding: 0;
+}
+a, a:visited {
+    color: black;
+}
+a:hover {
+    color: aquamarine;
+}
+figcaption {
+    color: gray;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+
+
+
+
+/* ----------- main header ---------- */
+
+#main-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    margin: 0;
+    padding: 10px;
+    min-height: 80px;
+    height: 10vh;
+    width: 100%;
+    
+    position: fixed;
+    top: 0;
+    z-index: 1; /* need to higher than the slider in resume part */
+    
+    background-color: #be3344;
+}
+#main-header ul {
+    display: flex;  
+    font-size: 1.5em;
+}
+#main-header li {
+    list-style-type: none;
+    margin: 0px 20px 0px 15px;
+    font-style: italic;
+    cursor: pointer;
+}
+#main-header li:hover {
+    color: aquamarine;
+}
+#main-header span {
+    font-size: 0.5em;
+}
+
+
+
+
+
+
+/*  ----------- home ------------- */
+
+#home {
+    display: flex;
+    justify-content: space-around;
+    
+    background-image: linear-gradient(to right, #3a3d3f ,#19181b);
+    
+    margin: 10vh 0px 20px 0px;
+    min-height: 500px;
+    height: 90vh;
+}
+
+/* home - video */
+#home figure {
+    width: 40%;
+    align-self: center;
+}
+#home video {
+    width: 100%; 
+    height: 260px;
+}
+
+/* home - text */
+#welcome-text {
+    width: 40%;
+    margin: auto;
+    text-align: justify;
+    
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 500;
+    color: white;
+}
+#home li {
+    list-style-type: circle;
+    margin-bottom: 10px;
+}
+#home .anchor {
+    text-decoration: underline;
+    color: #eee;
+    cursor: pointer;
+}
+#home h2 {
+    text-decoration: underline;
+    text-align: center;
+}
+#home a {
+    color : #eee;
+}
+
+
+
+
+
+
+
+
+/* ---------- resume ------------- */
+
+/* main disposition */
+#resume {
+    min-height: 90vh;
+    padding-top: 10px;
+}
+
+#resume a:visited {
+    color: black;
+}
+
+#resume header {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+#resume header p {
+    margin: 5px;
+    font-size: 0.7em;
+}
+
+#resume-bloc {
+    display: flex;
+    justify-content: space-around;
+}
+#resume-bloc h2{
+    text-align: center;
+    text-decoration: underline;
+} 
+
+#resume-part1, #resume-part2 {
+    width: 45%;
+}
+
+#resume footer {
+    text-align: center;
+}
+
+
+/* resume article */
+#resume article {
+    display: flex;
+    
+    min-height: 100px;
+    width: 90%;
+    margin: 30px auto;
+}
+
+/* particular one */
+#test-article{
+    flex-direction: column;
+}
+#test-article-main {
+    display: flex;
+}
+
+/* icons */
+#resume .fas { 
+    font-size: 3rem;
+    align-self: center;
+    margin: 0 30px;
+}
+
+/* extended view */
+.extended {
+    display: none;
+    list-style-type: circle;
+    margin: 8px 0px;
+}
+.extended #figures {
+    display: flex;
+    flex-wrap: wrap;
+}
+.extended img {
+    max-width: 100%;
+    margin-top: 30px;
+}
+#alva-infos {
+    text-align: right;
+    font-size: 0.9em;
+}
+
+
+
+
+/* resume slider - 
+source : www.w3schools.com */
+
+/* Box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 34px;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  border-radius: 50%;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+input:checked + .slider {
+  background-color: #2196F3;
+}
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  ----------- interview ------------- */
+
+/*   main disposition */
+#interview {
+    width: 100%;
+    padding: 10px 0;
+    min-height: 90vh;
+    text-align: justify;  
+    line-height: 1.5;
+    background-color: #06074d; /* #45467d */
+}
+#interview-main {
+    display: flex;
+    justify-content: space-around;
+}
+#interview-part1, #interview-part2 {
+    width: 45%;
+}
+
+#interview h2 {
+    text-align: center;
+    color: white;
+    text-decoration: underline;
+}
+
+#interview a {
+    color: black;
+}
+#interview a:visited {
+    color: black;
+}
+
+#interview article {
+    width: 90%;
+    margin: 30px auto;
+}
+
+.interview-question {
+    width: 100%;
+    margin: 0;
+    text-decoration: underline;
+    background-color: #3a3d3f;
+    color: white;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+}
+.interview-answer {
+    width: 100%;
+    margin: 0;
+    padding: 5px 10px;
+    background-image: linear-gradient(to right, white 70%, #444 100%);
+    border-radius: 0 0 10px 10px;
+    font-size: 1.1em;
+    font-family: 'Bentham', serif;
+    
+    max-height: 25px;
+    overflow-y: hidden;
+}
+.interview-answer p {
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+/* --------------- contact ------------ */
+
+#contact {
+    padding: 10px 0px;
+    min-height: 90vh;
+}
+#contact h2 {
+    text-align: center;
+    text-decoration: underline;
+}
+#contact-intro {
+    text-align: center;
+    font-size: 1.4em;
+    width: 50%;
+    margin: auto;
+}
+
+#contact hr {
+    color: black;
+    width: 80%;
+    margin: 30px auto;
+}
+form p {
+    font-size: 1.1em;
+}
+
+#contact-main {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+form {
+    width: 45%;
+    align-self: center;
+}
+#contact-direct {
+    width: 45%;
+    text-align: center;
+    align-self: center;
+    font-size: 1.2em;
+}
+
+/* input */
+#contact input {
+    font-size: 0.9em;
+    padding-left : 5px;
+}
+
+#user_name, #user_phone {
+    width: 30%;
+    height: 25px;
+    border: 1px solid black;
+}
+#user_company, #user_mail {
+    width: 60%;
+    height: 25px;
+    margin-left: 20px;
+    margin-top: 10px;
+    border: 1px solid black;
+}
+
+#sendButton {
+    margin: 0 0 30px 30px;
+    color: white;
+    width: 120px;
+    height: 40px;
+    font-size: 1.7em;
+    background-color: grey;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 30px;
+    font-size: 0.9em;
+    border: 1px solid black;
+    padding-left: 5px;
+}
+
+.fa-linkedin {
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+#thank-you-msg {
+    position: absolute;
+    margin: auto;
+    align-self: center;
+    display: none;
+    border: 2px solid black;
+    background-color: #eee;
+    padding: 30px;
+    font-size: 1.6em;
+}
+
+
+
+
+
+
+/* --------  main footer ------- */
+
+#main-footer {
+    text-align: center;
+    margin: 0;
+    border-top: 1px solid black;
+    font-size: 0.9em;
+    background-color: #eee;
+}
+#main-footer p {
+    padding-bottom: 10px;
+    margin-bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
+/* --------- responsive part -----------
+========================================== */
+
+@media (max-width: 768px) {
+
+/*  webpage main organisation */
+    
+    #home, #resume-bloc, #interview-main, #contact-main {
+        flex-wrap: wrap;
+    }
+
+    #welcome-text, #home figure, #resume-part1, #resume-part2, #interview-part1, #interview-part2, form, #contact-direct, #contact-intro {
+        width: 95%;
+    }
+    
+    
+/* main header */
+    #main-header {
+        min-height: 60px;
+    }
+    #main-header h1 {
+        font-size: 1.5em;
+    }
+    #main-header ul {
+        flex-direction: column;
+    }
+    
+/* home */    
+    #home {
+        min-height: 800px;
+    }
+    
+/*interview */
+    #interview-part1 {
+        border-bottom: 2px solid white;
+    }
+    
+/*contact */
+    form {
+        padding-bottom: 30px;
+        border-bottom: 2px solid black;
+    }    
+    
+}

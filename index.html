@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        
+        <title>Spontaneous Apply</title>
+        
+        <!-- Font : 'Google web fonts' -->
+        <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Bentham&display=swap" rel="stylesheet">
+        
+        <!-- Icons : 'fontawesome' -->
+        <link rel="stylesheet" href="css/css/all.css">
+        
+        <!-- Main css -->
+        <link rel="stylesheet" href="css/index.css">
+        
+        
+        <!-- Use of EmailJs plateform to receive message via the contact form without using backend -->
+        
+        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+        <script>
+            (function(){
+                emailjs.init("user_MyKey");
+            })();
+        </script>
+
+    </head>
+
+    <body>
+    
+        <header id="main-header">
+            
+            <h1>Junior Web Developer <span> - Frontend</span></h1>
+            
+            <nav>
+                <ul>
+                    <li onclick="goAnchor('resume')">Resume</li>
+                    <li onclick="goAnchor('interview')">Interview</li>
+                    <li onclick="goAnchor('contact')">Contact</li>
+                </ul>
+            </nav>
+            
+        </header>
+          
+        <main>
+            
+            <section id="home">
+                
+                <div id="welcome-text">
+                    
+                    <h2>Welcome/Välkommen!</h2>
+
+                    <p> Whether for a quick look or for an in depth reading, thank you for your time. 
+                        
+                    <br><br>
+                        
+                    Here you will find some useful informations about my spontaneous apply to be part of your team :
+                    </p>
+                    
+                    <ul>              
+                        <li>A <span class="anchor" onclick="goAnchor('resume')">resume</span>, telling who I am,</li>
+                        
+                        <li>An <span class="anchor"  onclick="goAnchor('interview')">interview</span>, showing why you should invest on me,</li>
+                        
+                        <li>A <span class="anchor"  onclick="goAnchor('contact')">contact</span> form, where I'll be very glad you let a message, positive or negative.</li>
+                    </ul>
+                    
+                    <br>
+                    
+                    <p> 
+                        All you see in  this website is <strong>made by myself</strong>, with HTML5/CSS3 and JavaScript (<a href="https://github.com/JeremyLavigne/Apply.git" target="_blank">Github link</a>).
+                        
+                    </p>
+
+                </div>
+                
+                <figure>
+                    
+                    <video id="introduce" controls>
+                        <source src="videos/Introduce-video.mp4" type="video/mp4">
+                        <source src="videos/Introduce-video.webm" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
+                    
+                    <figcaption>Let's introduce !</figcaption>
+                    
+                </figure>
+                
+            </section>
+            
+            
+            <section id="resume">
+                
+                <header>
+                    
+                    <p> Quick <br> view </p>
+                    
+                    <label class="switch">
+                      <input id="change-view" type="checkbox" onclick="changeView()">
+                      <span class="slider"></span>
+                    </label>
+                    
+                    <p> Extended <br> view </p>
+                    
+                </header>
+                
+                <div id="resume-bloc">
+                    
+                    <section id="resume-part1">
+                        
+                        <h2>Professional Experience</h2>
+                        
+                        <article>
+                            
+                            <i class="fas fa-home"></i>
+                            
+                            <div class="resume-text">
+                                
+                                <h3>Home | 2018-Now</h3>
+                                
+                                <ul>
+                                    
+                                    <li>Time for my children</li>
+                                    
+                                    <li>Job experiences
+                                    <ul class="extended">
+                                        <li>Server/Bartender</li>
+                                        <li>Factory handler</li>
+                                        <li>Data entry operator</li>
+                                        </ul></li>
+                                    
+                                    <li>Personnal project
+                                    <ul class="extended">
+                                        <li><strong>Data analysis</strong> in relation to a statistical approach to sports betting (regression)</li>
+                                        <li>Daily use of Numbers (Excel equivalent)</li>
+                                        </ul></li>
+                                    
+                                </ul>
+                                
+                            </div>
+                            
+                        </article>
+                        
+                        <article>
+                            
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            
+                            <div class="resume-text">    
+                                
+                                <h3>Teacher | 2016-2018</h3>
+                                
+                                <ul>
+                                    <li>Half-time Primary School Teacher
+                                    <ul class="extended">
+                                        <li>Plan and prepare class daily</li>
+                                        <li>Create various supports depending on the students</li>
+                                        <li><strong>Lead a project on Scratch 2.0 to develop pupils algorithmic skills</strong></li>
+                                        </ul></li>
+                                    
+                                    <li>Trainee Teacher
+                                    <ul class="extended">
+                                        <li>Awareness of students special needs and teaching methods</li>
+                                        <li>Several weeks in pre-school :<strong> Lead a project with "Bee-Bot" (programmable education robot)</strong> for 3-5 years-old pupils</li>
+                                        </ul></li>
+                                    
+                                </ul>
+                                
+                            </div>
+                            
+                        </article>
+                        
+                        <article>
+                            
+                            <i class="fas fa-biking"></i>
+                            
+                            <div class="resume-text">    
+                                
+                                <h3>Postman | 2009-2015</h3>
+                                
+                                <ul>
+                                    <li>Direct customer relationship</li>
+                                    
+                                    <li>Work in autonomy</li>
+                                    
+                                    <li>Management of 8 persons (1 year)
+                                    <ul class="extended">
+                                        <li>Claim departement</li>
+                                        <li>Responsibility (management and construction) for factor circuits</li>
+                                        <li><strong>Solution development and research</strong></li>
+                                        </ul></li>
+                                    
+                                </ul>
+                                
+                            </div>
+                            
+                        </article>
+                        
+                        <article>
+                            
+                            <i class="fas fa-child"></i>
+                            
+                            <div class="resume-text">
+                                
+                                <h3>Youth Leader | 2007-2008</h3>
+                                
+                                <ul>
+                                    <li>Work during summer or holidays</li>
+                                    
+                                    <li>In charge of three to twelve years old children</li>
+                                    
+                                </ul>
+                                
+                            </div>
+                            
+                        </article>
+
+                    </section>
+
+                    <section id="resume-part2">
+                        
+                        <h2>Education</h2>
+
+                        <article id="test-article">
+                            
+                            <div id="test-article-main">
+                                
+                                <i class="fas fa-chart-line"></i>
+                                
+                                <div class="resume-text">
+                                    
+                                    <h3><a href="files/logicalTest.pdf" target="_blank">Logical test</a></h3>
+                                    
+                                </div>
+                                
+                                <i class="fas fa-chart-bar"></i>
+
+                                <div class="resume-text">
+                                    
+                                    <h3><a href="files/personalityTest.pdf" target="_blank">Personality test</a></h3>
+                                    
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="extended">
+                                
+                               <div id="figures">
+                                   
+                                   <figure>
+                                       
+                                        <a href="files/logicalTest.pdf" target="_blank"><img src="images/logicalTest.png" alt="logical test"></a>
+                                       
+                                        <figcaption>Logical test, click on to see more.</figcaption>
+                                       
+                                    </figure>
+                                   
+                                    <figure>
+                                        
+                                        <a href="files/personalityTest.pdf" target="_blank"><img src="images/personalityTest.png" alt="personality test"></a>
+                                        
+                                        <figcaption>Personality test, click on to see more.</figcaption>
+                                        
+                                   </figure>
+                                   
+                                </div>
+                                
+                                <p id="alva-infos"> Tests passed with <a href="https://help.alvalabs.io/en/collections/1429827-alva-s-logic-test" target="_blank">Alva Labs</a></p>
+                                
+                            </div>
+                            
+                        </article>
+                        
+                        <article>
+                            
+                            <i class="fas fa-user-graduate"></i>
+                            
+                            <div class="resume-text">
+                                
+                                <h3>MA equivalent</h3>
+                                
+                                <ul>
+                                    <li>Primary school education</li>
+                                    <li>Multidisciplinary skills</li>
+                                </ul>
+                                
+                                <p class="extended">Regional competitive exam to become primary school teacher (final rank: 13th among about 400 candidates)</p>
+                                
+                            </div>
+                            
+                        </article>
+                        
+                        <article>
+                            
+                            <i class="fas fa-graduation-cap"></i>
+                            
+                            <div class="resume-text">
+                                
+                                <h3>Bachelor of Sciences</h3>
+                                
+                                <ul>
+                                    <li>Mathematics and computer science</li>
+                                    <li>English language certificate (B2 level)</li>
+                                    <li>Internet and computer certificate ("C2i")</li>
+                                </ul>
+                                
+                                <p class="extended">Full name of the University course : "Mathematics and computer sciences applied to language science" :</p>
+                                
+                                <p class="extended"><strong>Use in automatic (computer) language processing</strong> for example.</p>
+                                
+                            </div>
+                            
+                        </article>
+                        
+                        <article>
+                            
+                            <i class="fas fa-book-open"></i>
+                            
+                            <div class="resume-text">
+                                
+                                <h3>A-Level</h3>
+                                
+                                <ul>
+                                    <li>Specialized in Mathematics</li>
+                                    <li>"Engineering sciences" option</li>
+                                </ul>
+                                
+                            </div>
+                            
+                        </article>
+  
+                    </section>
+                </div>
+                
+                <footer>
+                    <p><a href="files/resume.pdf" target="_blank">See a classic PDF version </a></p>
+                </footer>
+                
+            </section>
+            
+            
+            <section id="interview">
+   
+                <header>     
+                    
+                    <h2>Interview</h2>
+                    
+                </header>  
+                
+                <div id="interview-main">
+                    
+                    <section id="interview-part1">
+                        
+                        <article>
+
+                            <h3 class="interview-question" onclick="openAnswer(0)">Tell us more about you.</h3>
+
+                            <div class="interview-answer">
+                                
+                                <p>My name is Jeremy, 30 years old and father of two boys. I lived my whole life in France, since last year when we moved in Stockholm with my wife.<br> Best decision we ever take! </p>
+                                
+                            </div>
+
+                        </article>
+
+                        <article>
+
+                            <h3 class="interview-question" onclick="openAnswer(1)">Postman, teacher and now developer?</h3>
+
+                            <div class="interview-answer">
+                                
+                                <p>I believe in opportunities, not in one life/one job: </p>
+                                
+                                <ul>
+                                    <li>A summer job of postman turned into a six-year job,</li>
+                                    <li>A return to university lead me to a teacher career,</li>
+                                    <li>A personal change of life (and country) offers me a new start.</li>
+                                </ul>
+                                
+                            </div>
+
+                        </article>
+
+                        <article>
+
+                            <h3 class="interview-question" onclick="openAnswer(2)">Why web developer?</h3>
+
+                            <div class="interview-answer">
+                                
+                                <p>I have always been interested in programming : it is a sweet mix of math and logic, like a puzzle you have to solve.
+                                <br>
+                                It often stayed in the background, today I want to put it in the frontground.
+                                <br><br>
+                                Web is attractive because it offers easy access and immediate rendering.
+                                </p>
+                                
+                            </div>
+
+                        </article>
+
+                        <article>
+
+                            <h3 class="interview-question" onclick="openAnswer(3)">What are your skills/knowledge?</h3>
+
+                            <div class="interview-answer">
+                                
+                                <p>HTML/CSS/JS, at the level you can see here :</p>
+                                
+                                <ul>
+                                    <li>Responsive web principles (<strong>flexbox</strong> or bootstrap),</li>
+                                    <li>Basic user interactions</li>
+                                </ul>
+
+                                <p>A little more :</p>
+                                
+                                <ul >
+                                    <li>Notions of "who do what", server/client - backend/frontend</li>
+                                    <li>Use an API/Read an API documentation</li>
+                                    <li>Algorithm scripting and Oriented Object Programming</li>
+                                </ul>
+
+                                <p>I am currently <strong>learning how to use React</strong>.</p>
+
+                            </div>
+
+                        </article>
+
+                        <article>
+
+                            <h3 class="interview-question" onclick="openAnswer(4)">Where did you learn?</h3>
+
+                            <div class="interview-answer">
+                                
+                                <p>On the Internet, using learning plateform :</p>
+                                
+                                <ul>
+                                    <li><a href="https://www.openclassrooms.com" target="_blank">Openclassroom.com</a> is a french website which offers a lot of quality courses. An english equivalent is <a href="https://www.codecademy.com" target="_blank">Codecademy.com</a></li>
+
+                                    <li><a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp</a>, which gets plenty of tutorials, as well as <a href="https://www.w3schools.com" target="_blank">W3Schools</a>.</li>
+                                </ul>
+                                
+                                <p>My University classes for the algorithmic part and the global vision.</p>
+                                
+                            </div>
+                            
+                        </article>
+
+                    </section>
+
+
+                    <section id="interview-part2">
+
+                        <article>
+
+                            <h3 class="interview-question" onclick="openAnswer(5)">What kind of position are you looking for?</h3>
+                            
+                            <div class="interview-answer">
+                                
+                                <p>Ideally, web developer. Be part of a development team, learn the best practices in real conditions, with professionals. </p>
+                                
+                            </div>
+                            
+                        </article>
+
+                        <article>
+
+                            <h3 class="interview-question" onclick="openAnswer(6)">Are you already qualified to work on your own?</h3>
+                            
+                            <div class="interview-answer">
+                                
+                                <p>Honestly, not immediatly. I am qualified to learn fast and understand when you explain me something. I can take my responsibilities quickly and work by myself as soon as possible.</p>
+
+                            </div>
+                            
+                        </article>
+
+                        <article>
+
+                            <h3 class="interview-question" onclick="openAnswer(7)">Can you imagine a different position?</h3>
+                            
+                            <div class="interview-answer">
+       
+                                <p>Totally, I understand a team/company have several needs, and all tasks are useful. Enter in this world is my main motivation, whatever the entry door.
+                                </p>
+                                
+                            </div>
+                            
+                        </article>
+
+                        <article>
+
+                            <h3 class="interview-question" onclick="openAnswer(8)">Can you imagine a particulary contract?</h3>
+                            
+                            <div class="interview-answer">
+                                
+                                <p>Absolutely. I am ready to do what it needs. A different statut/ a different salary seems fair as long as I am not "a real developer".</p>
+                                
+                                <ul>
+                                    <li>Be hired as a intern</li>
+                                    <li>Have an adapted salary/work time</li>
+                                    <li>Others proposals</li>
+                                </ul>
+                            
+                            </div>
+                            
+                        </article>
+
+                        <article>
+
+                            <h3 class="interview-question" onclick="openAnswer(9)">What if we absolutely need some skill you do not have?</h3>
+                            
+                            <div class="interview-answer">
+                                
+                                <p>Please tell me which one. Today I am focusing on React, but if you have others conditions, let me try to do my best.
+                                    
+                                <br><br> 
+                                    
+                                In the best case, it can prepare an interview or a start. Otherwise it will develop my skills and help me anyway.
+                                <br>
+                                I can not lose in this game.</p>
+
+                            </div>
+                            
+                        </article>
+
+                    </section>
+                    
+                </div>
+                          
+            </section>
+      
+            
+            <section id="contact">
+                
+                <h2>Contact</h2>
+                
+                <p id="contact-intro">Interested or not, whether to book an interview, ask some questions or just give an opinion/advice, feel free to let a message here. </p>
+                
+                <hr>
+                
+                <div id="contact-main">
+                    
+                    <form id="contact-form">
+                        
+                        <p>Who are you?</p>
+                        
+                        <input type="text" id="user_name" name="user_name" placeholder="Name" maxlength="25" required>
+                        
+                        <input type="text" id= "user_company" name="user_company" placeholder="Name of your company (optional) " maxlength="45">
+
+                        <br><br>
+                        
+                        <p>How can I contact you? </p>
+                        
+                        <input type="tel" id="user_phone" name="user_phone" placeholder="Phone number (optional) " maxlength="15">
+                        
+                        <input type="email" id= "user_mail" name="user_mail" placeholder="Adress mail (optional) " maxlength="55">
+
+                        <br><br>
+                        
+                        <p>Write your message :</p>
+
+                        <textarea id="informations" name="message" required></textarea>
+
+                        <button id="sendButton" type="submit">Send</button>
+
+                    </form>
+                    
+                    <aside id="contact-direct">
+                        
+                        <p>
+                            You can also contact me directly :
+                        </p>
+                        
+                        <p>
+                            <i class="fas fa-phone"></i> 0 76-702 66 08
+                        </p>
+                        
+                        <p>
+                            <i class="far fa-envelope"></i> <a href="mailto:lavigne.jeremy@post.com">lavigne.jeremy@post.com</a>
+                        </p>
+                        
+                        <p>
+                            <a href="http://www.linkedin.com/in/jérémy-lavigne-33577a177" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        </p>
+                        
+                    </aside>
+                    
+                    <p id="thank-you-msg">Thank you for your interest ! </p>
+                    
+                </div>
+        
+            </section>
+            
+        </main>
+        
+        <footer id="main-footer">
+            
+            <p>Build by Jérémy Lavigne, March 2020.</p>
+            
+        </footer>
+    
+
+        <script src="js/index.js"></script>
+        
+    </body>
+    
+</html>
